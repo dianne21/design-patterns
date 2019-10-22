@@ -9,7 +9,7 @@ services:
       - ../:/var/www/sources
     networks:
       dp-network:
-          ipv4_address: 192.168.21.10
+        ipv4_address: 192.168.21.10
 
 networks:
   dp-network:
