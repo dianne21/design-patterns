@@ -1,6 +1,7 @@
-version: '3'
+version: '3.5'
 services:
   dp-web:
+    container_name: dp-web
     build: .
     ports:
       - "80:80"
@@ -12,6 +13,7 @@ services:
 
 networks:
   dp-network:
+    name: dp-network
     driver: bridge
     ipam:
       driver: default
