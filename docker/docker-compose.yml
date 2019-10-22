@@ -1,0 +1,19 @@
+version: '3'
+services:
+  dp-web:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ../:/var/www/sources
+    networks:
+      dp-network:
+          ipv4_address: 192.169.24.10
+
+networks:
+  dp-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.169.24.0/24
